@@ -739,7 +739,7 @@ func checkStats(t *testing.T, app *app, msg []byte) {
 		return
 	}
 
-	if s.ReqSize > s.RespSize {
+	if s.ReqSize() > s.RespSize() {
 		t.Errorf("ReqSize should be <= RespSize: %v", s)
 	}
 }
